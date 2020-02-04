@@ -3,7 +3,7 @@ package com.leetcode.solutions;
 import com.leetcode.utils.JsonUtils;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class CombinationSum {
@@ -31,11 +31,15 @@ public class CombinationSum {
             for (int ele : candidates) {
                 rest.add(ele);
             }
+            rest.sort(Comparator.naturalOrder());
 
-            for (int ele : candidates) {
+            for (int i = 0; i < rest.size(); i++) {
+
+                int ele = rest.get(i);
+
                 List<Integer> singletonList = new ArrayList<>();
                 singletonList.add(ele);
-                combine(singletonList, ele, rest, target);
+                combine(singletonList, ele, rest.subList(i, rest.size()), target);
             }
 
             return combinations;
