@@ -1,8 +1,8 @@
-package com.leetcode.question;
+package com.leetcode.question.easy;
 
 import com.leetcode.bean.ListNode;
 
-public class MergeTwoLists_21 {
+public class MergeTwoLists {
 
     public static void main(String[] args) {
 

@@ -1,4 +1,4 @@
-package com.leetcode.question;
+package com.leetcode.question.easy;
 
 import java.util.Arrays;
 

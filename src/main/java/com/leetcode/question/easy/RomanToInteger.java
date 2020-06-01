@@ -1,4 +1,4 @@
-package com.leetcode.question;
+package com.leetcode.question.easy;
 
 import java.util.HashMap;
 
@@ -46,7 +46,7 @@ import java.util.HashMap;
  * 解释: M = 1000, CM = 900, XC = 90, IV = 4.
  * <p>
  */
-public class RomanToInteger_13 {
+public class RomanToInteger {
 
     public static void main(String[] args) {
         Solution solution = new Solution();

@@ -1,4 +1,4 @@
-package com.leetcode.question;
+package com.leetcode.question.easy;
 
 import java.util.Arrays;
 
@@ -20,7 +20,7 @@ import java.util.Arrays;
  * <p>
  * 所有输入只包含小写字母 a-z 。
  */
-public class LongestCommonPrefix_14 {
+public class LongestCommonPrefix {
 
     public static void main(String[] args) {
         String[] strs = new String[]{"flower","flow","flight"};

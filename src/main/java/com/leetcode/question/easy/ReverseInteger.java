@@ -1,6 +1,6 @@
-package com.leetcode.question;
+package com.leetcode.question.easy;
 
-public class ReverseInteger_7 {
+public class ReverseInteger {
 
     public static void main(String[] args) {
 

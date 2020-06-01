@@ -1,4 +1,4 @@
-package com.leetcode.question;
+package com.leetcode.question.easy;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -15,7 +15,7 @@ import java.util.HashMap;
  * 因为 nums[0] + nums[1] = 2 + 7 = 9
  * 所以返回 [0, 1]
  */
-public class TwoSum_1 {
+public class TwoSum {
 
     public static void main(String[] args) {
 
