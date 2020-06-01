@@ -1,4 +1,4 @@
-package com.leetcode.question.easy;
+package com.leetcode.question;
 
 /**
  * 实现 strStr() 函数。

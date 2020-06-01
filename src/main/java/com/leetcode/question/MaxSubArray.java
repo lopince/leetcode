@@ -1,4 +1,4 @@
-package com.leetcode.question.easy;
+package com.leetcode.question;
 
 import lombok.extern.slf4j.Slf4j;
 
