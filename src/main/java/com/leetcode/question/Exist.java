@@ -6,14 +6,16 @@ public class Exist {
 
     public static void main(String[] args) {
 
-        char[][] board = {
-                {'A', 'B', 'C', 'E'},
-                {'S', 'F', 'C', 'S'},
-                {'A', 'D', 'E', 'E'}};
+//        char[][] board = {
+//                {'A', 'B', 'C', 'E'},
+//                {'S', 'F', 'C', 'S'},
+//                {'A', 'D', 'E', 'E'}};
+
+        char[][] board = {{'a'}};
 
 
         Solution solution = new Solution();
-        System.out.println(solution.exist(board, "ACCCCCC"));
+        System.out.println(solution.exist(board, "a"));
     }
 
     private static class Solution {
@@ -61,6 +63,11 @@ public class Exist {
 
                 char tmp = words.removeFirst();
                 records[curY][curX] = 1;
+
+                if (words.isEmpty()){
+                    this.isExist = true;
+                    return;
+                }
 
                 // up
                 if (curY + 1 <= yMax) {
