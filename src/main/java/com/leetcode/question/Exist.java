@@ -1,6 +1,6 @@
 package com.leetcode.question;
 
-import java.util.*;
+import java.util.LinkedList;
 
 public class Exist {
 
@@ -13,7 +13,7 @@ public class Exist {
 
 
         Solution solution = new Solution();
-        System.out.println(solution.exist(board, "ABCB"));
+        System.out.println(solution.exist(board, "ACCCCCC"));
     }
 
     private static class Solution {
@@ -33,27 +33,16 @@ public class Exist {
                     words.add(c);
                 }
 
-                char root = words.getFirst();
                 int yMax = board.length - 1;
                 int xMax = board[0].length - 1;
 
                 for (int y = 0; y <= yMax; y++) {
                     for (int x = 0; x <= xMax; x++) {
 
-                        if (root == board[y][x]) {
-                            words.removeFirst();
+                        backtrack(x, y, xMax, yMax, board, new int[yMax + 1][xMax + 1], words);
 
-                            int[][] records = new int[yMax + 1][xMax + 1];
-                            records[y][x] = 1;
-
-                            backtrack(x, y, xMax, yMax, board, records, words);
-
-                            if (isExist){
-                                return true;
-                            }
-
-                            records[y][x] = 0;
-                            words.addFirst(root);
+                        if (isExist) {
+                            return true;
                         }
                     }
                 }
@@ -67,71 +56,35 @@ public class Exist {
 
             if (words.isEmpty()) {
                 this.isExist = true;
+            } else if (board[curY][curX] == words.getFirst()
+                    && records[curY][curX] == 0) {
 
-            } else {
-                char root = words.removeFirst();
+                char tmp = words.removeFirst();
+                records[curY][curX] = 1;
 
-                //up
-                if (isExist){
-                    return;
-                }
+                // up
                 if (curY + 1 <= yMax) {
-
-                    if (board[curY + 1][curX] == root
-                            && records[curY + 1][curX] != 1) {
-
-                        records[curY + 1][curX] = 1;
-                        backtrack(curX, curY + 1, xMax, yMax, board, records, words);
-                        records[curY + 1][curX] = 0;
-                    }
+                    backtrack(curX, curY + 1, xMax, yMax, board, records, words);
                 }
 
-                if (isExist){
-                    return;
-                }
                 // down
                 if (curY - 1 >= 0) {
-
-                    if (board[curY - 1][curX] == root
-                            && records[curY - 1][curX] != 1) {
-
-                        records[curY - 1][curX] = 1;
-                        backtrack(curX, curY - 1, xMax, yMax, board, records, words);
-                        records[curY - 1][curX] = 0;
-                    }
+                    backtrack(curX, curY - 1, xMax, yMax, board, records, words);
                 }
 
-                if (isExist){
-                    return;
-                }
-                // left
-                if (curX - 1 >= 0) {
-
-                    if (board[curY][curX - 1] == root
-                            && records[curY][curX - 1] != 1) {
-
-                        records[curY][curX - 1] = 1;
-                        backtrack(curX - 1, curY, xMax, yMax, board, records, words);
-                        records[curY][curX - 1] = 0;
-                    }
-                }
-
-                if (isExist){
-                    return;
-                }
                 // right
                 if (curX + 1 <= xMax) {
-
-                    if (board[curY][curX + 1] == root
-                            && records[curY][curX + 1] != 1) {
-
-                        records[curY][curX + 1] = 1;
-                        backtrack(curX + 1, curY, xMax, yMax, board, records, words);
-                        records[curY][curX + 1] = 0;
-                    }
+                    backtrack(curX + 1, curY, xMax, yMax, board, records, words);
                 }
 
-                words.addFirst(root);
+                // left
+                if (curX - 1 >= 0) {
+                    backtrack(curX - 1, curY, xMax, yMax, board, records, words);
+                }
+
+                // resume
+                words.addFirst(tmp);
+                records[curY][curX] = 0;
             }
         }
     }
