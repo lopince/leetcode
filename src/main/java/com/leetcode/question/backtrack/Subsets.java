@@ -1,4 +1,4 @@
-package com.leetcode.question;
+package com.leetcode.question.backtrack;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
