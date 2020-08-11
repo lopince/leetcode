@@ -21,33 +21,41 @@ public class SolveNQueens {
 
     private static class Solution {
 
-        List<List<String>> queens = new ArrayList<>();
+        List<List<String>> outputs = new ArrayList<>();
+        List<Integer[]> queens = new ArrayList<>();
 
         public List<List<String>> solveNQueens(int n) {
 
-            backtrack(0, n, initQueen(n), new int[n][n]);
+            backtrack(0, n, new Integer[n], new int[n][n]);
 
-            return queens;
-        }
-
-        private List<String> initQueen(int n) {
-
-            int counter = n;
-            StringBuilder line = new StringBuilder();
-            while (counter-- > 0) {
-                line.append('.');
+            for (Integer[] queen : queens){
+                outputs.add(createOutput(n, queen));
             }
 
-            counter = n;
-            List<String> queen = new ArrayList<>();
-            while (counter-- > 0) {
-                queen.add(line.toString());
-            }
-
-            return queen;
+            return outputs;
         }
 
-        private void backtrack(int row, int n, List<String> queen, int[][] board) {
+        private List<String> createOutput(int n, Integer[] queen) {
+
+            List<String> output = new ArrayList<>();
+
+            for (int i = 0; i < n; i++) {
+
+                StringBuilder line = new StringBuilder();
+                for (int j = 0; j < n; j++) {
+                    if (j == queen[i]) {
+                        line.append('Q');
+                    } else {
+                        line.append('.');
+                    }
+                }
+                output.add(line.toString());
+            }
+
+            return output;
+        }
+
+        private void backtrack(int row, int n, Integer[] queen, int[][] board) {
 
             if (row == n) {
                 queens.add(queen);
@@ -60,22 +68,12 @@ public class SolveNQueens {
                 int[][] bTemp = clone(board);
                 if (addQueen(col, row, bTemp)) {
 
-                    List<String> qTemp = new ArrayList<>(queen);
-                    String line = qTemp.get(row);
-                    qTemp.set(row, replace(line, col, 'Q'));
-
+                    Integer[] qTemp = clone(queen);
+                    qTemp[row] = col;
 
                     backtrack(row + 1, n, qTemp, bTemp);
                 }
             }
-        }
-
-        private String replace(String s, int index, char c) {
-
-            char[] cs = s.toCharArray();
-            cs[index] = c;
-
-            return new String(cs);
         }
 
         private boolean addQueen(int col, int row, int[][] board) {
@@ -127,6 +125,10 @@ public class SolveNQueens {
                     }
                 }
             }
+        }
+
+        private Integer[] clone(Integer[] array) {
+            return array.clone();
         }
 
         private int[][] clone(int[][] array) {
