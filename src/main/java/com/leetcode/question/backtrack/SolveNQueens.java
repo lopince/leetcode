@@ -1,11 +1,7 @@
 package com.leetcode.question.backtrack;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Queue;
-import java.util.jar.JarOutputStream;
-import java.util.stream.Collectors;
 
 public class SolveNQueens {
 
@@ -44,7 +40,7 @@ public class SolveNQueens {
 
             counter = n;
             List<String> queen = new ArrayList<>();
-            while (counter-- > 0){
+            while (counter-- > 0) {
                 queen.add(line.toString());
             }
 
@@ -74,7 +70,7 @@ public class SolveNQueens {
             }
         }
 
-        private String replace(String s, int index, char c){
+        private String replace(String s, int index, char c) {
 
             char[] cs = s.toCharArray();
             cs[index] = c;
