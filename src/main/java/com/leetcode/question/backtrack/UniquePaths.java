@@ -1,4 +1,4 @@
-package com.leetcode.question;
+package com.leetcode.question.backtrack;
 
 public class UniquePaths {
 
