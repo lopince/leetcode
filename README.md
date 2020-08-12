@@ -11,6 +11,7 @@
 #### bfs
 ````
 111. Minimum Depth of Binary Tree
+752. Open the Lock
 ````
 
 #### dp
