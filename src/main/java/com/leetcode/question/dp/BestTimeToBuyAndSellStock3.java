@@ -1,13 +1,12 @@
 package com.leetcode.question.dp;
 
-public class BestTimeToBuyAndSellStockIV {
+public class BestTimeToBuyAndSellStock3 {
 
     private static class Solution {
-        public int maxProfit(int k, int[] prices) {
-
+        public int maxProfit(int[] prices) {
             int days = prices.length;
 
-            k = Math.min(k, days);
+            int k = 2;
 
             // dp[j][0]: 当前日，最多进行j次交易的情况下，若股票卖出，此时最大利益
             // dp[j][1]: 当前日，最多进行j次交易的情况下，若买入股票，此时最大利益

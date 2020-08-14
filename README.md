@@ -1,6 +1,12 @@
 # leetcode
 
-#### backtrack/dfs
+#### bfs
+````
+111. Minimum Depth of Binary Tree
+752. Open the Lock
+````
+
+#### dfs
 ````
 51. N-Queens
 62. Unique Paths
@@ -8,15 +14,12 @@
 494. Target Sum
 ````
 
-#### bfs
-````
-111. Minimum Depth of Binary Tree
-752. Open the Lock
-````
-
 #### dp
 ````
 96. Unique Binary Search Trees
+121. Best Time to Buy and Sell Stock
+122. Best Time to Buy and Sell Stock II
+123. Best Time to Buy and Sell Stock III
 188. Best Time to Buy and Sell Stock IV
 509. Fibonacci Number  
 ````
