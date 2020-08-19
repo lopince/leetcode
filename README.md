@@ -2,6 +2,7 @@
 
 #### bfs
 ````
+102. Binary Tree Level Order Traversal
 111. Minimum Depth of Binary Tree
 752. Open the Lock
 ````
@@ -38,6 +39,7 @@
 28. Implement strStr()
 38. Count and Say
 53. Maximum Subarray
+83. Remove Duplicates from Sorted List
 79. Word Search
 94. Binary Tree Inorder Traversal
 98. Validate Binary Search Tree
