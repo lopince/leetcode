@@ -44,6 +44,7 @@
 94. Binary Tree Inorder Traversal
 98. Validate Binary Search Tree
 105. Construct Binary Tree from Preorder and Inorder Traversal
+114. Flatten Binary Tree to Linked List
 139. Word Break
 146. LRU Cache
 ````

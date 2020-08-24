@@ -1,4 +1,4 @@
-package com.leetcode.solution.bfs;
+package com.leetcode.solution.dp;
 
 import com.google.common.collect.Lists;
 

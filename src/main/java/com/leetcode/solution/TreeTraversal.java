@@ -31,14 +31,14 @@ public class TreeTraversal {
         Stack<TreeNode> stack = new Stack<>();
         stack.push(root);
 
-        while (stack.isEmpty()) {
+        while (!stack.isEmpty()) {
 
             TreeNode cur = stack.pop();
 
             consumer.accept(cur);
 
-            stack.push(cur.left);
             stack.push(cur.right);
+            stack.push(cur.left);
         }
     }
 
