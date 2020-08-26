@@ -12,15 +12,18 @@
 51. N-Queens
 62. Unique Paths
 78. Subsets
+200. Number of Islands
 494. Target Sum
 ````
 
 #### dp
 ````
+53. Maximum Subarray
 96. Unique Binary Search Trees
 121. Best Time to Buy and Sell Stock
 122. Best Time to Buy and Sell Stock II
 123. Best Time to Buy and Sell Stock III
+152. Maximum Product Subarray
 188. Best Time to Buy and Sell Stock IV
 416. Partition Equal Subset Sum
 509. Fibonacci Number  
@@ -46,5 +49,6 @@
 105. Construct Binary Tree from Preorder and Inorder Traversal
 114. Flatten Binary Tree to Linked List
 139. Word Break
+142. Linked List Cycle II
 146. LRU Cache
 ````
