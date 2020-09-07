@@ -4,6 +4,7 @@
 ````
 102. Binary Tree Level Order Traversal
 111. Minimum Depth of Binary Tree
+207. Course Schedule
 752. Open the Lock
 ````
 
@@ -51,4 +52,6 @@
 139. Word Break
 142. Linked List Cycle II
 146. LRU Cache
+208. Implement Trie (Prefix Tree)
+215. Kth Largest Element in an Array
 ````
