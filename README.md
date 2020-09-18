@@ -28,6 +28,8 @@
 152. Maximum Product Subarray
 188. Best Time to Buy and Sell Stock IV
 221. Maximal Square
+279. Perfect Squares
+300. Longest Increasing Subsequence
 416. Partition Equal Subset Sum
 509. Fibonacci Number  
 518. Coin Change 2
