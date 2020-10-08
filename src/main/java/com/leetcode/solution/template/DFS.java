@@ -1,4 +1,4 @@
-package com.leetcode.solution.dfs;
+package com.leetcode.solution.template;
 
 import com.leetcode.bean.GraphNode;
 
