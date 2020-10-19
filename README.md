@@ -15,6 +15,7 @@
 78. Subsets
 200. Number of Islands
 236. Lowest Common Ancestor of a Binary Tree
+399. Evaluate Division
 494. Target Sum
 ````
 
@@ -64,4 +65,5 @@
 238. Product of Array Except Self
 240. Search a 2D Matrix II
 347. Top K Frequent Elements
+394. Decode String
 ````
