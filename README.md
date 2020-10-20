@@ -58,6 +58,7 @@
 105. Construct Binary Tree from Preorder and Inorder Traversal
 114. Flatten Binary Tree to Linked List
 125. Valid Palindrome
+138. Copy List with Random Pointer
 139. Word Break
 142. Linked List Cycle II
 146. LRU Cache
