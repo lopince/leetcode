@@ -57,6 +57,7 @@
 98. Validate Binary Search Tree
 105. Construct Binary Tree from Preorder and Inorder Traversal
 114. Flatten Binary Tree to Linked List
+125. Valid Palindrome
 139. Word Break
 142. Linked List Cycle II
 146. LRU Cache
