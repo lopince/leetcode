@@ -21,6 +21,7 @@
 
 #### dp
 ````
+42. Trapping Rain Water
 53. Maximum Subarray
 96. Unique Binary Search Trees
 121. Best Time to Buy and Sell Stock
