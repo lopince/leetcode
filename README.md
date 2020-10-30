@@ -51,7 +51,6 @@
 26. Remove Duplicates from Sorted Array
 28. Implement strStr()
 38. Count and Say
-53. Maximum Subarray
 76. Minimum Window Substring
 79. Word Search
 83. Remove Duplicates from Sorted List
