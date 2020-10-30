@@ -53,7 +53,11 @@
 21. Merge Two Sorted Lists
 26. Remove Duplicates from Sorted Array
 28. Implement strStr()
+31. Next Permutation
+33. Search in Rotated Sorted Array
 38. Count and Say
+54. Spiral Matrix
+56. Merge Intervals
 76. Minimum Window Substring
 79. Word Search
 83. Remove Duplicates from Sorted List
