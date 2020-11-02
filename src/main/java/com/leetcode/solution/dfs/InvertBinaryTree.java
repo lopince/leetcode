@@ -5,7 +5,6 @@ import com.leetcode.bean.TreeNode;
 import java.util.ArrayDeque;
 import java.util.HashSet;
 import java.util.Queue;
-import java.util.function.Consumer;
 
 public class InvertBinaryTree {
 
