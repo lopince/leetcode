@@ -17,6 +17,7 @@
 200. Number of Islands
 226. Invert Binary Tree
 236. Lowest Common Ancestor of a Binary Tree
+329. Longest Increasing Path in a Matrix
 399. Evaluate Division
 494. Target Sum
 ````
