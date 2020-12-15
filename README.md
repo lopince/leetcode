@@ -80,6 +80,8 @@
 240. Search a 2D Matrix II
 347. Top K Frequent Elements
 394. Decode String
+406. Queue Reconstruction by Height
+
 
 剑指 Offer 40. 最小的k个数  LCOF
 ````
