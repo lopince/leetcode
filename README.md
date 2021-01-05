@@ -26,6 +26,7 @@
 ````
 42. Trapping Rain Water
 53. Maximum Subarray
+70. Climbing Stairs
 96. Unique Binary Search Trees
 121. Best Time to Buy and Sell Stock
 122. Best Time to Buy and Sell Stock II
