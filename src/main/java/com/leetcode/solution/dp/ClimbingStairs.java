@@ -1,4 +1,4 @@
-package com.leetcode.solution;
+package com.leetcode.solution.dp;
 
 public class ClimbingStairs {
 

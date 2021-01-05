@@ -67,6 +67,7 @@
 83. Remove Duplicates from Sorted List
 94. Binary Tree Inorder Traversal
 98. Validate Binary Search Tree
+101. Symmetric Tree
 105. Construct Binary Tree from Preorder and Inorder Traversal
 114. Flatten Binary Tree to Linked List
 125. Valid Palindrome
