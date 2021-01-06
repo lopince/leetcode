@@ -34,6 +34,7 @@
 123. Best Time to Buy and Sell Stock III
 152. Maximum Product Subarray
 188. Best Time to Buy and Sell Stock IV
+198. House Robber
 221. Maximal Square
 279. Perfect Squares
 300. Longest Increasing Subsequence
