@@ -14,6 +14,7 @@
 62. Unique Paths
 78. Subsets
 93. Restore IP Addresses
+104. Maximum Depth of Binary Tree
 200. Number of Islands
 226. Invert Binary Tree
 236. Lowest Common Ancestor of a Binary Tree
