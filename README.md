@@ -81,6 +81,7 @@
 155. Min Stack
 160. Intersection of Two Linked Lists
 165. Compare Version Numbers
+169. Majority Element
 208. Implement Trie (Prefix Tree)
 215. Kth Largest Element in an Array
 238. Product of Array Except Self
