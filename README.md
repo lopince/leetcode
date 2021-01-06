@@ -75,6 +75,7 @@
 136. Single Number
 138. Copy List with Random Pointer
 139. Word Break
+141. Linked List Cycle
 142. Linked List Cycle II
 146. LRU Cache
 165. Compare Version Numbers
