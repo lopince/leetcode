@@ -78,6 +78,7 @@
 141. Linked List Cycle
 142. Linked List Cycle II
 146. LRU Cache
+155. Min Stack
 165. Compare Version Numbers
 208. Implement Trie (Prefix Tree)
 215. Kth Largest Element in an Array
