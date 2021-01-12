@@ -1,11 +1,9 @@
 package com.leetcode.bean;
 
-import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
-import java.util.Stack;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingDeque;
 
 public class TreeNode {
 
@@ -54,7 +52,7 @@ public class TreeNode {
 
                 TreeNode r;
                 j++;
-                if ( j < values.length && values[j] != null) {
+                if (j < values.length && values[j] != null) {
                     r = new TreeNode(values[j]);
                 } else {
                     r = null;
@@ -73,8 +71,50 @@ public class TreeNode {
 
     @Override
     public String toString() {
-        return "TreeNode{" +
-                "val=" + val +
-                '}';
+
+        List<Integer> ret = new ArrayList<>();
+
+        TreeNode cur = this;
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(cur);
+
+        while (!queue.isEmpty()) {
+
+            int count = queue.size();
+            while (count-- > 0) {
+
+                cur = queue.poll();
+
+                if (cur != null) {
+
+                    ret.add(cur.val);
+
+                    queue.offer(cur.left);
+                    queue.offer(cur.right);
+                } else {
+
+                    ret.add(null);
+                }
+            }
+        }
+
+        if (ret.size() > 1) {
+            int index = ret.size() - 1;
+            while (index >= 0 && ret.get(index) == null) {
+                index--;
+            }
+            ret = ret.subList(0, index + 1);
+        }
+
+        return ret.toString();
+    }
+
+    public static void main(String[] args) {
+
+        Integer[] seq = new Integer[]{10, 5, -3, 3, 2, null, 11, 3, -2, null, 1};
+
+        TreeNode root = TreeNode.gen(seq);
+        System.out.println(root);
     }
 }
