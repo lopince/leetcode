@@ -87,6 +87,7 @@
 165. Compare Version Numbers
 169. Majority Element
 171. Excel Sheet Column Number
+172. Factorial Trailing Zeroes
 208. Implement Trie (Prefix Tree)
 215. Kth Largest Element in an Array
 238. Product of Array Except Self
