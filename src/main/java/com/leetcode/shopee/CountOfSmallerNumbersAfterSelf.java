@@ -2,7 +2,7 @@ package com.leetcode.shopee;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.List;
 
 public class CountOfSmallerNumbersAfterSelf {
@@ -18,68 +18,38 @@ public class CountOfSmallerNumbersAfterSelf {
 
     private static class Solution {
 
-        private HashMap<Integer, Integer> map = new HashMap<>();
-
         public List<Integer> countSmaller(int[] nums) {
 
-            int[] temp = Arrays.copyOf(nums, nums.length);
+            List<Integer> list = new ArrayList<>();
+            List<Integer> res = new ArrayList<>();
 
-            mergeSort(nums);
+            for (int i = nums.length - 1; i >= 0; i--) {
 
-            List<Integer> ans = new ArrayList<>();
-            for (int num : temp) {
-                ans.add(map.getOrDefault(num, 0));
+                int index = search(list, nums[i]);
+                res.add(index);
+                list.add(index, nums[i]);
             }
+            System.out.println(list);
 
-            return ans;
+            Collections.reverse(res);
+            return res;
         }
 
-        private void mergeSort(int[] nums) {
-            mergeSort(nums, 0, nums.length - 1);
-        }
+        private int search(List<Integer> list, int target) {
 
-        private void mergeSort(int[] nums, int left, int right) {
+            int l = 0;
+            int r = list.size();
 
-            if (left < right) {
-
-                int mid = (left + right) >> 1;
-                mergeSort(nums, left, mid);
-                mergeSort(nums, mid + 1, right);
-                merge(nums, left, mid, right);
-            }
-        }
-
-        private void merge(int[] nums, int left, int mid, int right) {
-
-            int i = left;
-            int j = mid + 1;
-
-            int k = 0;
-            int[] temp = new int[nums.length];
-
-            while (i <= mid && j <= right) {
-
-                if (nums[i] <= nums[j]) {
-                    temp[k++] = nums[i++];
-
+            while (l < r) {
+                int mid = (l + r) / 2;
+                if (list.get(mid) > target) {
+                    r = mid;
                 } else {
-                    map.put(nums[i], map.getOrDefault(nums[i], 0) + (right - j + 1));
-                    temp[k++] = nums[j++];
+                    l = mid + 1;
                 }
             }
 
-            while (i <= mid) {
-                temp[k++] = nums[i++];
-            }
-
-            while (j <= right) {
-                temp[k++] = nums[j++];
-            }
-
-            k = 0;
-            while (left <= right) {
-                nums[left++] = temp[k++];
-            }
+            return l;
         }
     }
 }
