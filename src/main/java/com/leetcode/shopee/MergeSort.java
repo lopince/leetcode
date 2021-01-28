@@ -22,25 +22,24 @@ public class MergeSort {
         mergeSort(nums, 0, nums.length - 1, new int[nums.length]);
     }
 
-    private static void mergeSort(int[] nums, int left, int right, int[] temp) {
+    private static void mergeSort(int[] nums, int l, int r, int[] temp) {
 
-        if (left < right) {
-
-            int mid = (left + right) / 2;
-            mergeSort(nums, left, mid, temp);
-            mergeSort(nums, mid + 1, right, temp);
-            sort(nums, left, mid, right, temp);
+        if (l < r) {
+            int mid = (l + r) / 2;
+            mergeSort(nums, l, mid, temp);
+            mergeSort(nums, mid + 1, r, temp);
+            merge(nums, l, mid, r, temp);
         }
     }
 
-    private static void sort(int[] nums, int left, int mid, int right, int[] temp) {
+    private static void merge(int[] nums, int l, int mid, int r, int[] temp) {
 
-        int i = left;
+        int i = l;
         int j = mid + 1;
         int k = 0;
 
-        while (i <= mid && j <= right) {
-            if (nums[i] <= nums[j]) {
+        while (i <= mid && j <= r) {
+            if (nums[i] < nums[j]) {
                 temp[k++] = nums[i++];
             } else {
                 temp[k++] = nums[j++];
@@ -51,13 +50,13 @@ public class MergeSort {
             temp[k++] = nums[i++];
         }
 
-        while (j <= right) {
+        while (j <= r) {
             temp[k++] = nums[j++];
         }
 
         k = 0;
-        while (left <= right) {
-            nums[left++] = temp[k++];
+        while (l <= r) {
+            nums[l++] = temp[k++];
         }
     }
 }
