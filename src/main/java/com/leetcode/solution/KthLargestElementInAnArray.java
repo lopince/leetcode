@@ -1,61 +1,37 @@
 package com.leetcode.solution;
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 public class KthLargestElementInAnArray {
+
+    public static void main(String[] args) {
+
+        int[] nums = new int[]{3,2,3,1,2,4,5,5,6};
+        int k = 4;
+
+        Solution solution = new Solution();
+        System.out.println(solution.findKthLargest(nums, k));
+    }
 
     private static class Solution {
         public int findKthLargest(int[] nums, int k) {
-            int size = nums.length;
-            heapify(nums, size);
 
-            while (k-- > 1) {
+            PriorityQueue<Integer> queue = new PriorityQueue<>(Comparator.comparingInt(o -> o));
 
-                swap(nums, 0, --size);
-                heapify(nums, size);
+            for (int num : nums) {
+
+                if (queue.size() < k) {
+                    queue.offer(num);
+                }else {
+                    if (num > queue.peek()){
+                        queue.poll();
+                        queue.add(num);
+                    }
+                }
             }
 
-            return nums[0];
-        }
-
-        public void heapify(int[] nums, int size) {
-
-            // size/2 is the first non-leaf node
-            for (int i = size / 2; i >= 0; --i) {
-                heapify(nums, i, size);
-            }
-        }
-
-
-        // adjust nums[i, i+size] as heap
-        public void heapify(int[] nums, int i, int size) {
-
-            // left child for node_i
-            int l = i * 2 + 1;
-
-            // right child for node_i
-            int r = i * 2 + 2;
-
-            // top of the heap/max value
-            int maxIndex = i;
-
-            if (l < size && nums[l] > nums[maxIndex]) {
-                maxIndex = l;
-            }
-            if (r < size && nums[r] > nums[maxIndex]) {
-                maxIndex = r;
-            }
-            if (maxIndex != i) {
-                swap(nums, i, maxIndex);
-
-                // adjust the sub tree as head
-                heapify(nums, maxIndex, size);
-            }
-        }
-
-        public void swap(int[] array, int i, int j) {
-
-            int tmp = array[i];
-            array[i] = array[j];
-            array[j] = tmp;
+            return queue.poll();
         }
     }
 }

@@ -6,52 +6,60 @@ import java.util.List;
 
 public class ThreeSum {
 
+    public static void main(String[] args) {
+
+        int[] nums = new int[]{-1, 0, 1, 2, -1, -4};
+
+        Solution solution = new Solution();
+        System.out.println(solution.threeSum(nums));
+    }
+
     private static class Solution {
+
         public List<List<Integer>> threeSum(int[] nums) {
-            if (nums == null) {
+
+            if (nums == null || nums.length < 4) {
                 return new ArrayList<>();
             }
 
-            int len = nums.length;
-
-            if (len < 3) {
-                return new ArrayList<>();
-            }
-
-            // sort
             Arrays.sort(nums);
 
-            List<List<Integer>> list = new ArrayList<>();
-            for (int i = 0; i < len; i++) {
+            List<List<Integer>> ans = new ArrayList<>();
+            for (int k = 0; k < nums.length; k++) {
 
-                if (nums[i] > 0) {
+                if (nums[k] >= 0) {
                     break;
                 }
 
-                if (i > 0 && nums[i] == nums[i - 1]) {
+                if (k > 0 && nums[k] == nums[k - 1]) {
                     continue;
                 }
 
-                int left = i + 1;
-                int right = len - 1;
-                while (left < right) {
+                int i = 0;
+                int j = nums.length - 1;
+                while (i < j) {
 
-                    int sum = nums[left] + nums[i] + nums[right];
+                    int sum = nums[k] + nums[i] + nums[j];
                     if (sum < 0) {
-                        while (left < right && nums[left] == nums[++left]) ;
+                        while (i < j && nums[i] == nums[++i]) {
+                        }
+
                     } else if (sum > 0) {
-                        while (left < right && nums[right] == nums[--right]) ;
+                        while (i < j && nums[j] == nums[--j]) {
+                        }
+
                     } else {
-                        list.add(Arrays.asList(nums[left], nums[i], nums[right]));
-                        while (left < right && nums[left] == nums[++left]) ;
-                        while (left < right && nums[right] == nums[--right]) ;
+                        ans.add(Arrays.asList(nums[k], nums[i], nums[j]));
+                        while (i < j && nums[i] == nums[++i]) {
+                        }
+                        while (i < j && nums[j] == nums[--j]) {
+                        }
                     }
                 }
-
             }
 
-
-            return list;
+            return ans;
         }
     }
+
 }

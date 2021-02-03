@@ -1,36 +1,48 @@
-package com.leetcode.solution;
+package com.leetcode.shopee;
 
 import java.util.Stack;
 
 public class ValidParentheses {
 
     public static void main(String[] args) {
-        String s = "([)]";
-        System.out.println(new Solution().isValid(s));
+
+        String s = "{[]}";
+
+        Solution solution = new Solution();
+        System.out.println(solution.isValid(s));
     }
 
     private static class Solution {
 
         public boolean isValid(String s) {
 
-            Stack<Character> stack = new Stack<>();
-            for (int i = 0; i < s.length(); i++) {
+            if (s == null || s.length() == 0) {
+                return true;
+            }
 
-                char c = s.charAt(i);
-                if (!stack.isEmpty()) {
-                    if (')' == c && '(' == stack.peek()
-                            || '}' == c && '{' == stack.peek()
-                            || ']' == c && '[' == stack.peek()) {
-                        stack.pop();
-                    } else {
-                        stack.push(c);
-                    }
+            if (s.length() % 2 != 0) {
+                return false;
+            }
+
+            Stack<Character> stack = new Stack<>();
+            char[] charArray = s.toCharArray();
+            for (char cur : charArray) {
+
+                if (cur == ')' && stack.peek() == '(') {
+                    stack.pop();
+
+                } else if (cur == ']' && stack.peek() == '[') {
+                    stack.pop();
+
+                } else if (cur == '}' && stack.peek() == '{') {
+                    stack.pop();
+
                 } else {
-                    stack.push(c);
+                    stack.add(cur);
                 }
             }
 
-            return stack.isEmpty();
+            return stack.empty();
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.leetcode.shopee;
+package com.leetcode.solution;
 
 import java.util.Arrays;
 

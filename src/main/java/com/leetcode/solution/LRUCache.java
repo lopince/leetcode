@@ -16,47 +16,50 @@ public class LRUCache {
         System.out.println(cache.get(1));    // return -1 (not found)
         System.out.println(cache.get(3));    // return 3
         System.out.println(cache.get(4));    // return 4
+
     }
 
-    private LinkedQueue queue;
     private HashMap<Integer, Node> map;
+    private LinkQueue queue;
     private int capacity;
 
     public LRUCache(int capacity) {
 
-        this.queue = new LinkedQueue();
         this.map = new HashMap<>();
-
+        this.queue = new LinkQueue();
         this.capacity = capacity;
     }
 
+    // o(1)
     public int get(int key) {
 
         if (map.containsKey(key)) {
 
-            Node node = map.get(key);
-            queue.remove(node);
-            queue.addLast(node);
+            Node cur = map.get(key);
+            this.queue.remove(cur);
+            this.queue.addLast(cur);
 
-            return node.val;
+            return cur.val;
         } else {
             return -1;
         }
     }
 
-    public void put(int key, int val) {
+    // o(1)
+    public void put(int key, int value) {
 
         Node node;
-        if (map.containsKey(key)) {
+        if (map.containsKey(key)){
             node = map.get(key);
-            node.val = val;
+            node.val = value;
 
             queue.remove(node);
 
-        } else {
-            node = new Node(key, val);
+        }else {
 
-            if (queue.size == capacity) {
+            node = new Node(key, value);
+
+            if (capacity == queue.size){
                 map.remove(queue.removeFirst());
             }
         }
@@ -65,23 +68,25 @@ public class LRUCache {
         map.put(key, node);
     }
 
-    private class LinkedQueue {
+    private class LinkQueue {
 
-        // do not store data
+        // 每次把新加入的元素放到最后
+        // 对头元素是最久未使用的，先删除他
+
+        private int size;
         private Node head;
         private Node tail;
-        private int size;
 
-        public LinkedQueue() {
+        LinkQueue() {
 
-            head = new Node(0, 0);
-            tail = new Node(0, 0);
+            this.head = new Node(0, 0);
+            this.tail = new Node(0, 0);
 
-            head.next = tail;
-            head.pre = tail;
+            this.head.pre = this.tail;
+            this.head.next = this.tail;
 
-            tail.pre = head;
-            tail.next = head;
+            this.tail.pre = this.head;
+            this.tail.next = this.head;
 
             this.size = 0;
         }
@@ -99,8 +104,9 @@ public class LRUCache {
             if (head.next != tail) {
 
                 Node first = head.next;
-                first.pre.next = first.next;
-                first.next.pre = first.pre;
+
+                head.next = first.next;
+                first.next.pre = head;
 
                 size--;
 
@@ -108,6 +114,7 @@ public class LRUCache {
             } else {
                 return -1;
             }
+
         }
 
         public void addLast(Node node) {
@@ -121,19 +128,20 @@ public class LRUCache {
 
             size++;
         }
+
     }
 
     private class Node {
 
         private Node pre;
         private Node next;
-        private int val;
         private int key;
+        private int val;
 
-        public Node(int key, int val) {
-
+        Node(int key, int val) {
             this.key = key;
             this.val = val;
         }
     }
+
 }

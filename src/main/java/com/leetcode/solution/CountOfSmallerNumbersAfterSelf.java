@@ -1,6 +1,8 @@
 package com.leetcode.solution;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class CountOfSmallerNumbersAfterSelf {
@@ -11,33 +13,43 @@ public class CountOfSmallerNumbersAfterSelf {
 
         Solution solution = new Solution();
         System.out.println(solution.countSmaller(nums));
+        System.out.println("Sorted: " + Arrays.toString(nums));
     }
 
     private static class Solution {
 
         public List<Integer> countSmaller(int[] nums) {
 
-            int[] counts = new int[nums.length];
+            List<Integer> list = new ArrayList<>();
+            List<Integer> res = new ArrayList<>();
 
-            for (int i = nums.length - 2; i >= 0; i--) {
+            for (int i = nums.length - 1; i >= 0; i--) {
 
-                int j = i;
-                while (nums[j] < nums[j + 1] && j < nums.length - 1) {
-                    j++;
-                }
+                int index = search(list, nums[i]);
+                res.add(index);
+                list.add(index, nums[i]);
+            }
+            System.out.println(list);
 
-                if (j == nums.length - 1) {
-                    counts[i] = 0;
+            Collections.reverse(res);
+            return res;
+        }
+
+        private int search(List<Integer> list, int target) {
+
+            int l = 0;
+            int r = list.size();
+
+            while (l < r) {
+                int mid = (l + r) / 2;
+                if (list.get(mid) > target) {
+                    r = mid;
                 } else {
-                    counts[j] = nums[j] > nums[j + 1] ? counts[j + 1] + 1 : counts[j + 1];
+                    l = mid + 1;
                 }
             }
 
-            List<Integer> ans = new ArrayList<>();
-            for (int count : counts) {
-                ans.add(count);
-            }
-            return ans;
+            return l;
         }
     }
 }

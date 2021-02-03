@@ -1,6 +1,5 @@
-package com.leetcode.shopee;
+package com.leetcode.solution;
 
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

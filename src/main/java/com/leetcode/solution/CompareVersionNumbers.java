@@ -3,8 +3,9 @@ package com.leetcode.solution;
 public class CompareVersionNumbers {
 
     public static void main(String[] args) {
-        String version1 = "1.1";
-        String version2 = "1";
+
+        String version1 = "0.1";
+        String version2 = "1.1";
 
         Solution solution = new Solution();
         System.out.println(solution.compareVersion(version1, version2));
@@ -18,38 +19,34 @@ public class CompareVersionNumbers {
                 return 0;
             }
 
-            String[] v1Segments = version1.split("\\.");
-            String[] v2Segments = version2.split("\\.");
-
-            int len1 = v1Segments.length;
-            int len2 = v2Segments.length;
+            String[] seg1 = version1.split("\\.");
+            String[] seg2 = version2.split("\\.");
 
             int i = 0;
-            for (; i < len1 && i < len2; i++) {
-                int i1 = Integer.parseInt(v1Segments[i]);
-                int i2 = Integer.parseInt(v2Segments[i]);
+            int j = 0;
+            while (i < seg1.length && j < seg2.length) {
 
-                if (i1 < i2) {
+                int v1 = Integer.parseInt(seg1[i]);
+                int v2 = Integer.parseInt(seg2[j]);
+
+                if (v1 > v2) {
+                    return 1;
+                } else if (v1 < v2) {
                     return -1;
-                } else if (i1 > i2) {
+                }
+
+                i++;
+                j++;
+            }
+
+            while (i < seg1.length) {
+                if (Integer.parseInt(seg1[i++]) > 0){
                     return 1;
                 }
             }
 
-            if (len1 == len2) {
-                return 0;
-            }
-
-            int cur = i;
-            while (cur < len1) {
-                if (Integer.parseInt(v1Segments[cur++]) > 0){
-                    return 1;
-                }
-            }
-
-            cur = i;
-            while (cur < len2) {
-                if (Integer.parseInt(v2Segments[cur++]) > 0){
+            while (j < seg2.length){
+                if (Integer.parseInt(seg2[j++]) > 0){
                     return -1;
                 }
             }
