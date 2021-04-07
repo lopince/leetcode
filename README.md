@@ -73,12 +73,19 @@
 38. Count and Say
 54. Spiral Matrix
 56. Merge Intervals
+61. Rotate List
 66. Plus One
 69. Sqrtx
+73. Set Matrix Zeroes
+74. Search a 2D Matrix
 75. Sort Colors
 76. Minimum Window Substring
 79. Word Search
+80. Remove Duplicates from Sorted Array II
+81. Search in Rotated Sorted Array II
+82. Remove Duplicates from Sorted List II
 83. Remove Duplicates from Sorted List
+90. Subsets II
 92. Reverse Linked List II
 94. Binary Tree Inorder Traversal
 96. Unique Binary Search Trees
@@ -96,12 +103,15 @@
 142. Linked List Cycle II
 146. LRU Cache
 148. Sort List
+150. Evaluate Reverse Polish Notation
 155. Min Stack
 160. Intersection of Two Linked Lists
 165. Compare Version Numbers
 169. Majority Element
 171. Excel Sheet Column Number
 172. Factorial Trailing Zeroes
+173. Binary Search Tree Iterator
+189. Rotate Array
 199. Binary Tree Right Side View
 208. Implement Trie (Prefix Tree)
 215. Kth Largest Element in an Array
@@ -116,10 +126,17 @@
 437. Path Sum III
 438. Find All Anagrams in a String
 445. Add Two Numbers II
+456. 132 Pattern
 556. Next Greater Element III
 560. Subarray Sum Equals K
 581. Shortest Unsorted Continuous Subarray
+739. Daily Temperatures
+781. Rabbits in Forest
+1006. Clumsy Factorial
+1603. Design Parking System
 
+LCP 01. Guess Numbers
+LCP 06. 拿硬币
 
 剑指 Offer 40. 最小的k个数  LCOF
 ````
