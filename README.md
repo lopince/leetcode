@@ -104,6 +104,7 @@
 146. LRU Cache
 148. Sort List
 150. Evaluate Reverse Polish Notation
+153. Find Minimum in Rotated Sorted Array
 155. Min Stack
 160. Intersection of Two Linked Lists
 165. Compare Version Numbers
