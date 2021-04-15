@@ -70,9 +70,3 @@ class TreeNode(object):
             ret.pop()
 
         return str(ret)
-
-
-seq = [10, 5, -3, 3, 2, None, 11, 3, -2, None, 1]
-
-root = TreeNode.gen(seq)
-print root
