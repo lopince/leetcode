@@ -42,6 +42,7 @@
 22. Generate Parentheses
 25. Reverse Nodes in k-Group
 26. Remove Duplicates from Sorted Array
+27. Remove Element
 28. Implement strStr()
 31. Next Permutation
 33. Search in Rotated Sorted Array
@@ -62,6 +63,7 @@
 82. Remove Duplicates from Sorted List II
 83. Remove Duplicates from Sorted List
 90. Subsets II
+91. Decode Ways
 92. Reverse Linked List II
 94. Binary Tree Inorder Traversal
 96. Unique Binary Search Trees
