@@ -100,6 +100,7 @@
 241. Different Ways to Add Parentheses
 292. Nim Game
 347. Top K Frequent Elements
+363. Max Sum of Rectangle No Larger Than K
 394. Decode String
 402. Remove K Digits
 406. Queue Reconstruction by Height
