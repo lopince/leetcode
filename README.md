@@ -101,6 +101,7 @@
 292. Nim Game
 347. Top K Frequent Elements
 363. Max Sum of Rectangle No Larger Than K
+377. Combination Sum IV
 394. Decode String
 402. Remove K Digits
 406. Queue Reconstruction by Height
