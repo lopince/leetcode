@@ -1,6 +1,7 @@
 import time
 from sortedcontainers import SortedList
 
+
 class Solution(object):
     def find132pattern(self, nums):
         """
@@ -29,12 +30,12 @@ class Solution(object):
         return False
             
             
-nums = [1, 2, 3 ,4]
+nums = [1, 2, 3, 4]
 
 start_time = int(round(time.time() * 1000))
 
 s = Solution()
-print s.find132pattern(nums)
+print(s.find132pattern(nums))
 
 
-print 'time cost: ', int(round(time.time() * 1000)) - start_time, 'ms'
+print('time cost: ', int(round(time.time() * 1000)) - start_time, 'ms')
