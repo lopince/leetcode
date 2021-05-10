@@ -1,5 +1,6 @@
 import TreeNode
 
+
 class Solution(object):
     def leafSimilar(self, root1, root2):
         """
