@@ -125,6 +125,7 @@
 1011. Capacity To Ship Packages Within D Days
 1603. Design Parking System
 1720. Decode XORed Array
+1734. Decode XORed Permutation
 
 LCP 01. Guess Numbers
 LCP 06. 拿硬币
