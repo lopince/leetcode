@@ -99,6 +99,7 @@
 238. Product of Array Except Self
 240. Search a 2D Matrix II
 241. Different Ways to Add Parentheses
+289. Game of Life
 292. Nim Game
 347. Top K Frequent Elements
 363. Max Sum of Rectangle No Larger Than K
