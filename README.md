@@ -124,6 +124,7 @@
 938. Range Sum of BST
 1006. Clumsy Factorial
 1011. Capacity To Ship Packages Within D Days
+1269. Number of Ways to Stay in the Same Place After Some Steps
 1603. Design Parking System
 1720. Decode XORed Array
 1734. Decode XORed Permutation
