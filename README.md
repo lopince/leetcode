@@ -1,30 +1,6 @@
 # leetcode
 
-#### bfs
-````
-102. Binary Tree Level Order Traversal
-111. Minimum Depth of Binary Tree
-207. Course Schedule
-752. Open the Lock
-````
 
-#### dfs
-````
-51. N-Queens
-46. Permutations
-62. Unique Paths
-78. Subsets
-93. Restore IP Addresses
-104. Maximum Depth of Binary Tree
-200. Number of Islands
-226. Invert Binary Tree
-236. Lowest Common Ancestor of a Binary Tree
-329. Longest Increasing Path in a Matrix
-399. Evaluate Division
-494. Target Sum
-````
-
-#### dp
 ````
 1. Two Sum
 2. Add Two Numbers
@@ -49,15 +25,19 @@
 33. Search in Rotated Sorted Array
 34. Find First and Last Position of Element in Sorted Array
 38. Count and Say
+46. Permutations
+51. N-Queens
 54. Spiral Matrix
 56. Merge Intervals
 61. Rotate List
+62. Unique Paths
 66. Plus One
 69. Sqrtx
 73. Set Matrix Zeroes
 74. Search a 2D Matrix
 75. Sort Colors
 76. Minimum Window Substring
+78. Subsets
 79. Word Search
 80. Remove Duplicates from Sorted Array II
 81. Search in Rotated Sorted Array II
@@ -66,13 +46,17 @@
 90. Subsets II
 91. Decode Ways
 92. Reverse Linked List II
+93. Restore IP Addresses
 94. Binary Tree Inorder Traversal
 96. Unique Binary Search Trees
 97. Interleaving String
 98. Validate Binary Search Tree
 101. Symmetric Tree
+102. Binary Tree Level Order Traversal
 103. Binary Tree Zigzag Level Order Traversal
+104. Maximum Depth of Binary Tree
 105. Construct Binary Tree from Preorder and Inorder Traversal
+111. Minimum Depth of Binary Tree
 114. Flatten Binary Tree to Linked List
 118. Pascal's Triangle
 125. Valid Palindrome
@@ -95,13 +79,19 @@
 173. Binary Search Tree Iterator
 189. Rotate Array
 199. Binary Tree Right Side View
+200. Number of Islands
+207. Course Schedule
 208. Implement Trie (Prefix Tree)
 215. Kth Largest Element in an Array
+226. Invert Binary Tree
+236. Lowest Common Ancestor of a Binary Tree
 238. Product of Array Except Self
 240. Search a 2D Matrix II
 241. Different Ways to Add Parentheses
 289. Game of Life
 292. Nim Game
+329. Longest Increasing Path in a Matrix
+399. Evaluate Division
 347. Top K Frequent Elements
 363. Max Sum of Rectangle No Larger Than K
 368. Largest Divisible Subset
@@ -115,14 +105,17 @@
 445. Add Two Numbers II
 456. 132 Pattern
 457. Circular Array Loop
+494. Target Sum
 556. Next Greater Element III
 560. Subarray Sum Equals K
 581. Shortest Unsorted Continuous Subarray
 633. Sum of Square Numbers
 739. Daily Temperatures
 740. Delete and Earn
+752. Open the Lock
 781. Rabbits in Forest
 938. Range Sum of BST
+993. Cousins in Binary Tree
 1006. Clumsy Factorial
 1011. Capacity To Ship Packages Within D Days
 1269. Number of Ways to Stay in the Same Place After Some Steps
